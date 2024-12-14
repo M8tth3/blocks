@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        grid-template-rows: 1fr 1fr; /* Two equal-height rows */
+        height: 100%;
+    }
+    
+    .left-upper {
+        background-color: rgb(35, 35, 35); /* Optional: for styling */
+        grid-column: 1; /* This will be in the first column */
+        grid-row: 1; /* This will be in the first row */
+    }
+    
+    .left-lower {
+        background-color: rgb(37, 37, 37); /* Optional: for styling */
+        grid-column: 1; /* This will be in the first column */
+        grid-row: 2; /* This will be in the second row */
+    }
+    
+    .right {
+        background-color: black;
+        grid-column: 2;
+        grid-row: span 2;
+        display: flex;               /* Center content */
+        justify-content: center;     /* Horizontal centering */
+        align-items: center;         /* Vertical centering */
+        padding: 30px;               /* Adds padding around the image */
+        box-sizing: border-box;  
+
+    }
+    #robot {
+        max-width: 100%;            /* Ensures image does not overflow horizontally */
+        max-height: calc(100% - 60px);  /* Ensures image height is within the container, minus padding (30px top and bottom) */
+        object-fit: contain;   
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="left-upper"></div>
+        <div class="left-lower"></div>
+        <div class="right">
+            <img src="https://github.com/user-attachments/assets/f139ecf8-d0a9-463a-85ea-b6aeec0204e5" id="robot">
+        </div>
+    </div>
+</body>
